@@ -4,12 +4,13 @@ import { setupCounter } from './counter.js'
 
 const URL = "https://rickandmortyapi.com/"
 
-async function(URL) (
+async function getData(URL) {
     try {
         const response = await fetch(URL)
-        const data = await response.json()
-        document.body.innerHTML = data
+        const data = await response.json() //makes data into JSON object we can use
+        document.getElementById("api-response").textContent = data.content;
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-)
+}
+getData(URL);

@@ -2,7 +2,7 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 
-const URL = "https://rickandmortyapi.com/"
+const URL = "https://bible-api.com/"
 
 async function getData(URL) {
     try {

@@ -2,7 +2,8 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 
-const URL = "https://bible-api.com/"
+const URL = "https://bible-api.com/BOOK+CHAPTER:VERSE"
+
 
 async function getData(URL) {
     try {

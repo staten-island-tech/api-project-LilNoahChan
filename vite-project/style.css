@@ -1,97 +1,129 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*:focus {
+  outline: none;
 }
 
 body {
-  margin: 0;
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Common CSS */
+.container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
+.box {
+  padding: 30px;
+  display: flex;
+  background: #fff;
+  box-shadow: 0 8.9098px 36.6557px rgb(67 67 67 / 6%);
+  border-radius: 10.9822px;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
 }
 
-.read-the-docs {
-  color: #888;
+
+#form input {
+  padding: 12px;
+  border: none;
+  background-color: #F6F6F5;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  min-width: 250px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.btn {
+  background: linear-gradient(to right, #EA0909, #bd1e26);
+  background-color: #bd1e26;
+  border: none;
+  color: #ffffff;
+  padding: 6px 21px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 13.5px;
+  text-decoration: none;
+  margin-top: 8px;
+  letter-spacing: 0.04px;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  min-height: 40px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn:hover {
+  background-color: #bd1e26;
+  background: linear-gradient(to right, #bd1e26, #EA0909);
+  color: #ffffff;
 }
+
+.result.box {
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.full-lyrics,
+.result ul {
+  padding: 20px;
+}
+
+.result ul.song-list li {
+  list-style: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 15px;
+}
+
+.result ul.song-list li img {
+  max-width: 120px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.result ul.song-list li span {
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #222;
+  padding: 6px 21px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 5px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.result ul.song-list li span:hover {
+  background-color: #bd1e26;
+  background: linear-gradient(to right, #bd1e26, #EA0909);
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {}

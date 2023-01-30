@@ -9,12 +9,12 @@ const apiURL = 'https://api.lyrics.ovh';
 
 /// adding event listener in form
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
+form.addEventListener('submit', no => {
+    no.preventDefault();
     searchValue = search.value.trim()
 
     if (!searchValue) {
-        alert("There is nothing to search")
+        alert("no results")
     }
     else {
         searchSong(searchValue)

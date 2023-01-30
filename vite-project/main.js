@@ -44,7 +44,7 @@ function showData(data) {
                         <img src="${song.artist.picture}" alt="Artist image">
                         <strong>${song.artist.name}</strong> - ${song.title} 
                     </div>
-                    <span data-artist="${song.artist.name}" data-songtitle="${song.title}"> get lyrics</span>
+                    
                 </li>`
             )
             .join('')}
@@ -55,27 +55,38 @@ function showData(data) {
 
 
 
-//event listener in get lyrics button
-result.addEventListener('click', e => {
-    const clickedElement = e.target;
 
-    //checking clicked elemet is button or not
-    if (clickedElement.tagName === 'SPAN') {
-        const artist = clickedElement.getAttribute('data-artist');
-        const songTitle = clickedElement.getAttribute('data-songtitle');
 
-        getLyrics(artist, songTitle)
-    }
-})
 
-// Get lyrics for song
-async function getLyrics(artist, songTitle) {
-    const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
-    const data = await res.json();
 
-    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
 
-    result.innerHTML = `<div class="full-lyrics"><h2><strong>${artist}</strong> - ${songTitle}</h2>
-    <p>${lyrics}</p></div>`;
 
-}
+
+// //event listener in get lyrics button
+// result.addEventListener('click', e => {
+//     const clickedElement = e.target;
+
+//     //checking clicked elemet is button or not
+//     if (clickedElement.tagName === 'SPAN') {
+//         const artist = clickedElement.getAttribute('data-artist');
+//         const songTitle = clickedElement.getAttribute('data-songtitle');
+
+//         getLyrics(artist, songTitle)
+//     }
+// })
+
+// // Get lyrics for song
+// async function getLyrics(artist, songTitle) {
+//     const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
+//     const data = await res.json();
+
+//     const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+
+//     result.innerHTML = `
+//         <div class="full-lyrics">
+//             <h2>${artist} - ${songTitle}</h2>
+//             <p>${lyrics}</p>
+//         </div>
+//     `;
+
+// }

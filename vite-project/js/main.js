@@ -1,13 +1,15 @@
+
+
 const form = document.getElementById('form')
 const search = document.getElementById('search')
 const result = document.getElementById('result')
 
 
-/// api URL ///
+
 const apiURL = 'https://api.lyrics.ovh';
 
 
-/// adding event listener in form
+
 
 form.addEventListener('submit', no => {
     no.preventDefault();
@@ -22,18 +24,17 @@ form.addEventListener('submit', no => {
 })
 
 
-//search song 
+
 async function searchSong(searchValue) {
     const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`)
     const data = await searchResult.json();
 
-    // console.log(finaldata)
+
     showData(data)
 }
 
 
 
-//display final result in DO
 function showData(data) {
 
     result.innerHTML = `
@@ -41,7 +42,7 @@ function showData(data) {
       ${data.data
             .map(song => `<li>
                     <div>
-                        <img src="${song.artist.picture}" alt="Artist image">
+                        <img src="${song.artist.picture}" alt="${song.title} by ${song.artist.name} Cover">
                         <strong>${song.artist.name}</strong> - ${song.title} 
                     </div>
                     
@@ -53,40 +54,3 @@ function showData(data) {
 }
 
 
-
-
-
-
-
-
-
-
-
-// //event listener in get lyrics button
-// result.addEventListener('click', e => {
-//     const clickedElement = e.target;
-
-//     //checking clicked elemet is button or not
-//     if (clickedElement.tagName === 'SPAN') {
-//         const artist = clickedElement.getAttribute('data-artist');
-//         const songTitle = clickedElement.getAttribute('data-songtitle');
-
-//         getLyrics(artist, songTitle)
-//     }
-// })
-
-// // Get lyrics for song
-// async function getLyrics(artist, songTitle) {
-//     const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
-//     const data = await res.json();
-
-//     const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
-
-//     result.innerHTML = `
-//         <div class="full-lyrics">
-//             <h2>${artist} - ${songTitle}</h2>
-//             <p>${lyrics}</p>
-//         </div>
-//     `;
-
-// }

@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description">
+
 
   <title>Search Song</title>
 
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -23,13 +20,14 @@
     <div class="box">
       <h1>Search Song</h1>
       <form id="form">
-        <input type="search" id="search" placeholder="Enter artist name or song title...">
+        <input type="search" id="search" placeholder="Enter artist name or song title..." alt="search bar"
+          aria-label="search bar">
         <button class="btn">Search</button>
       </form>
     </div>
     <section class="result box" id="result"></section>
   </div>
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

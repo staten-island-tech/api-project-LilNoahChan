@@ -1,7 +1,11 @@
-const form = document.getElementById('form')
-const search = document.getElementById('search')
-const result = document.getElementById('result')
+import '../style.css'
 
+ 
+const DOMSelectors = {
+form: document.getElementById('form'),
+search: document.getElementById('search'),
+result:document.getElementById('result'),
+}
 
 
 const apiURL = 'https://api.lyrics.ovh';
@@ -9,9 +13,9 @@ const apiURL = 'https://api.lyrics.ovh';
 
 
 
-form.addEventListener('submit', no => {
+DOMSelectors.form.addEventListener('submit', no => {
     no.preventDefault();
-    searchValue = search.value.trim()
+    const searchValue = DOMSelectors.search.value.trim()
 
     if (!searchValue) {
         alert("no results")
@@ -50,5 +54,3 @@ function showData(data) {
     </ul>
   `;
 }
-
-

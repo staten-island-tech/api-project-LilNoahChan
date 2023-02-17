@@ -16,7 +16,7 @@ const amiiboSerieses = {
 }
 
 const URL = "https://amiiboapi.com/api/amiibo/?amiiboSeries="
-// want to add "?amiiboseries=whatever we want it to be"
+
 
 async function fartyMcFartster(URL) {
     try {
@@ -29,6 +29,7 @@ async function fartyMcFartster(URL) {
             DOMSelectors.amiibos.insertAdjacentHTML("afterbegin",
                 `
       <h1> ${x.name} </h1>
+      <img> ${x.image}</img>
       `
             )
         )

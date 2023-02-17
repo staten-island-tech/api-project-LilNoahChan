@@ -1,0 +1,24 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.buttons {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+  margin: auto;
+  
+}
+
+.btn {
+  width: 10rem;
+}

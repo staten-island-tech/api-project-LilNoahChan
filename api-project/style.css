@@ -21,4 +21,13 @@ h1 {
 
 .btn {
   width: 10rem;
+  background-color: aliceblue;
+  border-radius: 10px;
+  height: 10vh;
+
 }
+
+.bio{
+  font-size: 3rem;
+}
+

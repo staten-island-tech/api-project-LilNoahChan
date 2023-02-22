@@ -4,6 +4,18 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  background-color: #78acc4;
+  font-family: 'Jost', sans-serif;
+
+}
+
+#title{
+  font-size: 10rem;
+  outline: black 0.3rem solid;
+  margin: 1rem auto;
+  width: 90vw;
+  border-radius: 30px;
+  margin-bottom: 3rem;
 }
 
 h1 {
@@ -11,23 +23,62 @@ h1 {
   font-size: 5rem;
 }
 
+h2{
+  font-size: 3rem;
+}
+
 .buttons {
   display: flex;
   width: 90vw;
   justify-content: space-around;
   margin: auto;
+  margin-bottom: 7rem;
   
 }
 
 .btn {
   width: 10rem;
-  background-color: aliceblue;
   border-radius: 10px;
-  height: 10vh;
+  height: 4vh;
+  background-color: #9cc6d9;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 2px 7px #4b6b7a;
+  transition: 0.2s;
+}
 
+.btn:hover {
+background-color: #93b0bd;
+}
+
+.btn:active {
+  background-color: #859da8;
+  box-shadow: 0 0;
+  translate: 2px 7px;
+}
+
+.wholeThing{
+  display: flex;
+  justify-content: center;
+  outline: black 0.3rem solid;
+  width: 70vw;
+  align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 30px;
+  height: 65vh;
 }
 
 .bio{
-  font-size: 3rem;
+  text-align: center;
+}
+
+.nameAndStuff{
+  width: 40vw;
+}
+
+img{
+  max-height: 60vh;
+  width: 20vw;
 }
 

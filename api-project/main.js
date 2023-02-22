@@ -29,19 +29,25 @@ async function fartyMcFartster(URL) {
 
         data.amiibo.forEach(x =>
 
-            DOMSelectors.amiibos.insertAdjacentHTML("afterbegin",
+            DOMSelectors.amiibos.insertAdjacentHTML("beforeend",
                 `
-      <h1> ${x.name} </h1>
-      <img src="${x.image}" alt="Image of ${x.name}">
-      <div class= "bio">
-      <body>Game: ${x.gameSeries} <br>
-      Release in NA: ${x.release.na}<br>
-      Release in JP: ${x.release.jp}<br>
-      Release in EU: ${x.release.eu}<br>
-      Release in AU: ${x.release.au}
-      </body>
-      </div>
+                <div class="wholeThing">
+                <img src="${x.image}" alt="Image of ${x.name}" class="theImage">
       
+                <div class="nameAndStuff">
+                <h1> ${x.name} </h1>
+     
+
+      <div class= "bio">
+      <h2>Game: ${x.gameSeries} </h2>
+      <h2>Release in NA: ${x.release.na} </h2>
+      <h2>Release in JP: ${x.release.jp} </h2>
+      <h2>Release in EU: ${x.release.eu} </h2>
+      <h2>Release in AU: ${x.release.au} </h2>
+      
+      </div>
+      </div>
+      </div>
       `
             )
         )
